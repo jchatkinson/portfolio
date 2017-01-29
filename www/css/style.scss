@@ -1,0 +1,231 @@
+$color1: #2C3E50;
+$color2: #294876; 
+$color3: #18314F;
+$color4: #384E77;
+$color5: #8BBEB2;
+$color6: #E6F9AF;
+$colortext: #ECF0F1;
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300italic);
+
+body {
+  background-color: $color1;
+  color: $colortext;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 2em;
+  height: 100vh;
+  margin: 0;
+
+}
+
+h1 {
+    font-size: 3em;
+    padding: 3em 0 1em 0;
+    margin-top: 0;
+}
+
+// ensure that the navigation stays at the top of the browser window by giving it a position: fixed property. Setting its width to min-width: 100% will ensure that the navigation spans the full width of the browser window.
+.navBar {
+  background-color: $color2;
+  position: fixed;
+  min-width: 100%;
+  z-index: 1;
+}
+
+.logo {
+  background-color: $color5;
+  border-radius: 50px;
+  display: inline-block;
+  height: 45px;
+  margin: 1em 0;
+  width: 45px;
+}
+
+// content is centered by giving the .wrapper class the property margin: 0 auto. We limit its width by giving it the property max-width: 960px.
+.wrapper {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 2%;
+}
+
+// Full Navigation, including mobile menu
+nav {
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    width: 50%;
+    
+    a {
+      color: $colortext;
+      text-decoration: none;
+      transition: all .5s ease;
+
+      &:hover {color: $color5;}
+    }
+  }
+  
+  li  {
+    display: inline-block;
+    margin-left: 24px;
+  }
+
+ #menu-toggle {
+     display: none;
+ }
+
+ .label-toggle {
+     display: none;
+ }
+
+  .wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  } 
+
+   @media screen and (max-width: 512px) {
+    ul {
+      background-color: $color4;
+      display: block;
+      height: 0;
+      list-style-type: none;
+      opacity: 0;
+      text-align: center;
+      transition: all 1s ease;
+      width: 100%;
+      visibility: hidden;
+      padding-left: 0px;
+      margin: 0;
+    }
+
+    li {
+      border-bottom: 2px solid $color2;
+      color: $color2;
+      display: block;
+      font-size: 1.5em;
+      padding: 1em 0;
+      margin-left: 0;
+    }
+
+    #menu-toggle:checked ~ ul {
+      opacity: 1;
+      height: 100%;
+      visibility: visible;
+    }
+
+    .label-toggle {
+      background: linear-gradient(to bottom, $color6 0%, $color6 20%, transparent 20%, transparent 40%, $color6 40%, $color6 60%, transparent 60%, transparent 80%, $color6 80%, $color6 100%); //Gradient Hamburger
+      cursor: pointer;
+      display: block;
+      float: right;
+      height: 30px;
+      margin-top: 1em;
+      width: 30px;
+    }
+
+     .wrapper {display: block;}   
+   }
+ }
+
+header {
+    text-align: center;
+    background-color: $color2;
+    padding-bottom: 60px;
+
+    p {
+        color: $color6;
+    }
+}
+
+main {
+    padding-bottom: 60px;
+}
+
+//timeline
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    ol {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        max-width: calc(100% - 48px);
+        width: 600px;
+        margin-top: 72px;
+        list-style: none;
+
+        li {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding: 0 0 56px 40px;
+            min-height: 100px;
+
+        }
+
+        li:not(:last-child):before {
+            content: "";
+            background-color: $color2;
+            left: -3px;
+            position: absolute;
+            height: calc(100% - 82px);
+            width: 6px;
+            top: 82px;
+            border-radius: 3px;
+        }
+    }
+
+    .timeline-icon {
+        background-color: $color4;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        left: -25px;
+        height: 50px;
+        margin: 1em 0;
+        width: 50px;
+        position: absolute;
+        top: 1px;
+
+        i {
+            padding-top: 18px;
+        }
+    }
+    time {
+        font-size: small;
+        color: $color6;
+    }
+    .timeline-title {
+        font-size: 1.5rem;
+    }
+    .timeline-pill {
+        display:none;
+        color: $colortext;
+        font-size: small;
+        border-radius: 24px;
+        background-color: $color5;
+        padding: 0 6px 0 6px;
+
+        width: 76px;
+        text-align: center;
+
+    }
+    li:hover .timeline-pill {
+        display:block;
+    }
+
+}
+
+footer {
+  border-top: 2px solid $color6;
+  position: relative;
+  margin-top: -60px;
+  padding: 1rem;
+  background-color: $color1;
+  height: 60px;
+}
