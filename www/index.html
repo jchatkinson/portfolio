@@ -2,6 +2,11 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio site for Jeremy Atkinson">
+    <meta name="author" content="Jeremy Atkinson">
+
     <title>Jeremy Atkinson!</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
@@ -32,25 +37,44 @@
                 <li>
                     <div class='timeline-icon'><i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i></div>
                     <div class='timeline-title-wrapper'>
-                        <time>May 18th, 2017</time>
+                        <time>September 4th, 2014 - Present</time>
                         <div class='timeline-title'>MASc in Civil Engineering</div>
-                        <a class='timeline-pill'>+ Expand</a>
+                        <a class='timeline-pill' onclick="toggleVisibility(this)">+ Expand</a>
+                        <div class='timeline-description'>
+                            <p>I am currently a student in the Structural and Earthquake Engineering department working on my Master of Applied Science degree
+                                at UBC. I expect to graduate April 2017.</p>
+                            <p>My thesis topic relates to the seismic design of tall buildings with core and outrigger systems. In it, I use a novel
+                                energy-based design approach called Equivalent Energy Design Procedure (EEDP) to design 30-story and 40-story reinforced
+                                concrete wall-and-outrigger buildings. The design considers multiple performance objectives at different seismic
+                                hazards. In low-intensity earthquakes, the entire structure stays essentially elastic and undamaged. In medium-intensity
+                                earthquakes, the outrigger system is designed to yield and dissipate energy through inelastic action (The system
+                                can contain fuses such as Buckling-restrained-braces, which can be replaced after the earthquake). The walls remains
+                                essentially-undamaged. In large-intensity earthquakes, both the outrigger and wall will yield and dissipate energy.
+                                Damage is allowed to occur, but drifts are controlled and life-safety limit state is achieved. </p>
+                            <p>The design methodology is shown to work through a series of nonlinear analyses using OpenSees, the Open System for Earthquake
+                                Engineering Simulation. The prototype buildings are modelled and analyzed using a suite of earthquake ground motion
+                                records scaled to each hazard level. At each hazard, the response of the system is compared to the intended performance
+                                objectives. Finally, incremental dynamic analysis is used to assess the building performance under extreme events.
+                                The Collapse margin ratio is calculated and shown to be acceptable for the buildings studied.</p>
+                        </div>
                     </div>
                 </li>
                 <li>
                     <div class='timeline-icon'><i class="fa fa-github-alt fa-lg" aria-hidden="true"></i></div>
                     <div class='timeline-title-wrapper'>
-                        <time>Jan 1st, 2017</time>
+                        <time>Jan 20th, 2017 - Present</time>
                         <div class='timeline-title'>GcalReport tool for Google Calendars</div>
-                        <a class='timeline-pill'>+ Expand</a>
+                        <a class='timeline-pill' onclick="toggleVisibility(this)">+ Expand</a>
+                        <div class='timeline-description'><p>This is a project I am currently working on to solve a personal problem - I hate filling out my timesheet. I use Google Calendar to track my billable time, and Google conveniently provides an API to access that data. This project accesses a user's calendar data, allows them to configure some options, and then exports the data into a formatted summary. It is written in python (using flask) and will be hosted on Google App Engine once finished.</p></div>
                     </div>
                 </li>
                 <li>
                     <div class='timeline-icon'><i class="fa fa-briefcase fa-lg" aria-hidden="true"></i></div>
                     <div class='timeline-title-wrapper'>
-                        <time>December 2nd, 2015</time>
-                        <div class='timeline-title'>Structural Engineer at John Bryson and Partners</div>
-                        <a class='timeline-pill'>+ Expand</a>
+                        <time>December 2nd, 2015 - Present</time>
+                        <div class='timeline-title'>Structural Engineer at Bryson Markulin Zickmantel Structural Engineers</div>
+                        <a class='timeline-pill' onclick="toggleVisibility(this)">+ Expand</a>
+                        <div class='timeline-description'><p>Not much to say here. I currently work as a design engineer at Bryson Markulin Zickmantel Structural Engineers, where I do seismic modelling and design of buildings.</p></div>
                     </div>
                 </li>
                 <li>
@@ -58,7 +82,9 @@
                     <div class='timeline-title-wrapper'>
                         <time>July 18th, 2014</time>
                         <div class='timeline-title'>Hugo Blog Themes</div>
-                        <a class='timeline-pill'>+ Expand</a>
+                        <a class='timeline-pill' onclick="toggleVisibility(this)">+ Expand</a>
+                        <div class='timeline-description'><p><a href="https://github.com/jchatkinson/HugoMDL">HugoMDL</a> is a theme I created for my old website. As the name suggests, it is built for Hugo, a static website generator, and it uses Google’s Material Design Lite Library. The design is based off the example blog template provided by MDL. I extended the template to work with Hugo’s frontmatter and templating functions. It include three content types: blog posts, projects, bio section. It makes heavy use of cards, which are one of the primary methods of displaying content in Material Design.</p>
+                        <p>I also created a Hugo Theme based on the MaterializeCSS framework. <a href="https://github.com/jchatkinson/hugo-materialized">The theme</a> features three main components - A bio, posts, and projects. The bio is laid out a bit like a resume. It automatically displays a few recent projects and posts, with some static content below. Posts are presumeably the most viewed part of the site, and appear prominently on the front page. Projects are displayed as cards with room for an image, title, description, and links to the repo and details. A simple sidenav is always available on larger screens, and reverts to a collapseable side-nav on smaller screens. </p></div>
                     </div>
                 </li>
                 <li>
@@ -66,7 +92,8 @@
                     <div class='timeline-title-wrapper'>
                         <time>June 18th, 2014</time>
                         <div class='timeline-title'>SDOF Analysis Program</div>
-                        <a class='timeline-pill'>+ Expand</a>
+                        <a class='timeline-pill' onclick="toggleVisibility(this)">+ Expand</a>
+                        <div class='timeline-description'><p>One of my first web development projects was to create a single-degree-of-freedom analysis tool. I wanted to learn some basic web development skills, and chose to use AngularJS and Foundation framework. The code is available at a github repository <a href='http://jchatkinson.github.io/sdof'>here</a></p></div>
                     </div>
                 </li>
                 <li>
@@ -74,7 +101,8 @@
                     <div class='timeline-title-wrapper'>
                         <time>May 18th, 2014</time>
                         <div class='timeline-title'>Reinforced Concrete Design in Matlab</div>
-                        <a class='timeline-pill'>+ Expand</a>
+                        <a class='timeline-pill' onclick="toggleVisibility(this)">+ Expand</a>
+                        <div class='timeline-description'><p>I've written a substantial amount of MATLAB code, mostly to do with the design and analysis of reinforced concrete buildings. This includes scripts to process and scale earthquake ground motion records, to do response spectrum analysis, to calculate the axial-moment interaction diagram of arbitrary reinforced concrete sections, and scripts to create nonlinear models for OpenSees.</p></div>
                     </div>
                 </li>
                 <li>
@@ -82,7 +110,8 @@
                     <div class='timeline-title-wrapper'>
                         <time>May 18th, 2013</time>
                         <div class='timeline-title'>BASc in Civil Engineering</div>
-                        <a class='timeline-pill'>+ Expand</a>
+                        <a class='timeline-pill' onclick="toggleVisibility(this)">+ Expand</a>
+                        <div class='timeline-description'>In 2013 I recieved a Bachelor of Applied Science in Civil Engineering from the University of British Columbia.</div>
                     </div>
                 </li>
             </ol>
@@ -96,6 +125,25 @@
             <a href="https://twitter.com/Jeremy_Atkinson">Twitter</a>
         </span>
     </footer>
+
+
+    <script language="javascript" type="text/javascript">
+        function toggleVisibility(ele) {
+            var parent = ele.parentNode;
+            var target = parent.getElementsByClassName('timeline-description');
+            var button = parent.getElementsByClassName('timeline-pill');
+            if (target[0]) {
+                target = target[0]; button=button[0];
+                if (target.style.display == 'none' || target.style.display == '') {
+                    target.style.display = 'block';
+                    button.innerHTML = '- Collapse'
+                } else {
+                    target.style.display = 'none';
+                    button.innerHTML = '+ Expand'
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>

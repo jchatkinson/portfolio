@@ -8,7 +8,7 @@ $colortext: #ECF0F1;
 
 $maxwidth: 512px;
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300italic);
 
 body {
   background-color: $color1;
@@ -230,6 +230,9 @@ main {
     }
     li:hover .timeline-pill {
         display:block;
+    }
+    .timeline-description {
+        display: none;
     }
 
 }

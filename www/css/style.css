@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300italic);
 body {
   background-color: #2C3E50;
   color: #ECF0F1;
@@ -171,6 +171,8 @@ main {
     text-align: center; }
   .timeline li:hover .timeline-pill {
     display: block; }
+  .timeline .timeline-description {
+    display: none; }
 
 footer {
   border-top: 2px solid #E6F9AF;
