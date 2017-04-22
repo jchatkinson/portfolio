@@ -16,7 +16,7 @@ a {
   color: #ECF0F1; }
 
 .navBar {
-  background-color: #294876;
+  background-color: #384E77;
   position: fixed;
   min-width: 100%;
   z-index: 1; }
@@ -46,7 +46,7 @@ nav ul {
   width: 50%; }
   nav ul a {
     text-decoration: none;
-    transition: all .5s ease; }
+    transition: all 0.1s ease; }
     nav ul a:hover {
       color: #8BBEB2; }
 
@@ -73,7 +73,7 @@ nav .wrapper {
     list-style-type: none;
     opacity: 0;
     text-align: center;
-    transition: all 1s ease;
+    transition: all 0.1s ease;
     width: 100%;
     visibility: hidden;
     padding-left: 0px;
@@ -102,7 +102,7 @@ nav .wrapper {
 
 header {
   text-align: center;
-  background-color: #294876;
+  background-color: #384E77;
   padding-bottom: 60px; }
   header p {
     color: #E6F9AF;
@@ -127,12 +127,12 @@ main {
     margin-top: 72px;
     list-style: none; }
     .timeline ol li {
-      cursor: pointer;
       display: flex;
       flex-direction: column;
       position: relative;
       padding: 0 0 56px 40px;
-      min-height: 100px; }
+      min-height: 100px;
+      cursor: pointer; }
     .timeline ol li:not(:last-child):before {
       content: "";
       background-color: #294876;
@@ -142,6 +142,8 @@ main {
       width: 6px;
       top: 82px;
       border-radius: 3px; }
+    .timeline ol li:hover .timeline-title {
+      color: #8BBEB2; }
   .timeline .timeline-icon {
     background-color: #384E77;
     border-radius: 50px;
@@ -167,6 +169,7 @@ main {
     border-radius: 24px;
     background-color: #8BBEB2;
     padding: 0 6px 0 6px;
+    cursor: pointer;
     width: 76px;
     text-align: center; }
   .timeline li:hover .timeline-pill {

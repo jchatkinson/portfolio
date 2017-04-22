@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio site for Jeremy Atkinson">
     <meta name="author" content="Jeremy Atkinson">
@@ -28,23 +29,21 @@
     </nav>
     <header>
         <h1>Jeremy Atkinson</h1>
-        <p>Hi! My name is Jeremy Atkinson. I'm a structural engineer from Vancouver, Canada. I also like learning web development in my spare time. This site shows some of the things I've been working on. If you would like to get in touch with me, feel free to <a href="mailto:jeremy@jatkinson.me">send an email.</a></p>
+        <p>Hi! My name is Jeremy Atkinson. I'm a structural engineer in training from Vancouver, Canada. I also like learning web development in my spare time. This site shows some of the things I've been working on. If you would like to get in touch with me, feel free to <a href="mailto:jeremy@jatkinson.me">send an email.</a></p>
     </header>
     <main>
         <div class='timeline'>
             <a name="timeline"></a>
             <ol>
-                <li>
+                <li onclick="toggleVisibility(this)">
                     <div class='timeline-icon'><i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i></div>
                     <div class='timeline-title-wrapper'>
-                        <time>September 4th, 2014 - Present</time>
+                        <time>September 2014 - April 2017</time>
                         <div class='timeline-title'>MASc in Civil Engineering</div>
-                        <a class='timeline-pill' onclick="toggleVisibility(this)">+ Expand</a>
                         <div class='timeline-description'>
-                            <p>I am currently a student in the Structural and Earthquake Engineering department working on my Master of Applied Science degree
-                                at UBC. I expect to graduate April 2017.</p>
+                            <p>I did my Master of Applied Science (Civil Engineering) degree in the Structural and Earthquake Engineering department at the University of British Columbia.</p>
                             <p>My thesis topic relates to the seismic design of tall buildings with core and outrigger systems. In it, I use a novel
-                                energy-based design approach called Equivalent Energy Design Procedure (EEDP) to design 30-story and 40-story reinforced
+                                energy-based design approach called Equivalent Energy Design Procedure (EEDP) to design 20, 30, and 40-story reinforced
                                 concrete wall-and-outrigger buildings. The design considers multiple performance objectives at different seismic
                                 hazards. In low-intensity earthquakes, the entire structure stays essentially elastic and undamaged. In medium-intensity
                                 earthquakes, the outrigger system is designed to yield and dissipate energy through inelastic action (The system
@@ -54,63 +53,68 @@
                             <p>The design methodology is shown to work through a series of nonlinear analyses using OpenSees, the Open System for Earthquake
                                 Engineering Simulation. The prototype buildings are modelled and analyzed using a suite of earthquake ground motion
                                 records scaled to each hazard level. At each hazard, the response of the system is compared to the intended performance
-                                objectives. Finally, incremental dynamic analysis is used to assess the building performance under extreme events.
-                                The Collapse margin ratio is calculated and shown to be acceptable for the buildings studied.</p>
+                                objectives. Finally, incremental dynamic analysis is used to assess the building collapse performance under extreme events.
+                                The three prototype buildings are shown to have a suffiently small probability of collapse.</p>
                         </div>
                     </div>
                 </li>
-                <li>
+                <li onclick="toggleVisibility(this)">
                     <div class='timeline-icon'><i class="fa fa-github-alt fa-lg" aria-hidden="true"></i></div>
                     <div class='timeline-title-wrapper'>
-                        <time>Jan 20th, 2017 - Present</time>
+                        <time>January 2017 - Present</time>
                         <div class='timeline-title'>GcalReport tool for Google Calendars</div>
-                        <a class='timeline-pill' onclick="toggleVisibility(this)">+ Expand</a>
                         <div class='timeline-description'><p>This is a project I am currently working on to solve a personal problem - I hate filling out my timesheet. I use Google Calendar to track my billable time, and Google conveniently provides an API to access that data. This project accesses a user's calendar data, allows them to configure some options, and then exports the data into a formatted summary. It is written in python (using flask) and will be hosted on Google App Engine once finished.</p></div>
                     </div>
                 </li>
-                <li>
+                <li onclick="toggleVisibility(this)">
+                    <div class='timeline-icon'><i class="fa fa-table fa-lg" aria-hidden="true"></i></div>
+                    <div class='timeline-title-wrapper'>
+                        <time>March 2016</time>
+                        <div class='timeline-title'>Post-Processing Tools for ETABS</div>
+                        <div class='timeline-description'>
+                            <p>Seismic design of tall buildings results in lots of data. When a building is analyzed, all the results need to be organized and manipulated to arrive at a set of forces for each element in the structure that we want to design. Previously, this was done manually through a series of spreadsheet functions, filters, sorting, etc. I quickly realized that alot of time could be saved by automating this data manipulation process, so I wrote a MATLAB program to do it for me and compiled it to a standalone executable that can be installed on any computer. It has saved countless hours of time, allowing me to spend more time on the structural design and less time on the boring stuff.</p>
+                            <p>It is very much a work-in-progress, as there are always little improvements and additional features that can be incorporated. Unfortuneately, the project is not open-source, as it was written on company time. </p>
+                        </div>
+                    </div>
+                </li>
+                <li onclick="toggleVisibility(this)">
                     <div class='timeline-icon'><i class="fa fa-briefcase fa-lg" aria-hidden="true"></i></div>
                     <div class='timeline-title-wrapper'>
-                        <time>December 2nd, 2015 - Present</time>
+                        <time>December 2015 - Present</time>
                         <div class='timeline-title'>Structural Engineer at Bryson Markulin Zickmantel Structural Engineers</div>
-                        <a class='timeline-pill' onclick="toggleVisibility(this)">+ Expand</a>
                         <div class='timeline-description'><p>Not much to say here. I currently work as a design engineer at Bryson Markulin Zickmantel Structural Engineers, where I do seismic modelling and design of buildings.</p></div>
                     </div>
                 </li>
-                <li>
+                <li onclick="toggleVisibility(this)">
                     <div class='timeline-icon'><i class="fa fa-github-alt fa-lg" aria-hidden="true"></i></div>
                     <div class='timeline-title-wrapper'>
-                        <time>July 18th, 2014</time>
+                        <time>July 2014</time>
                         <div class='timeline-title'>Hugo Blog Themes</div>
-                        <a class='timeline-pill' onclick="toggleVisibility(this)">+ Expand</a>
                         <div class='timeline-description'><p><a href="https://github.com/jchatkinson/HugoMDL">HugoMDL</a> is a theme I created for my old website. As the name suggests, it is built for Hugo, a static website generator, and it uses Google’s Material Design Lite Library. The design is based off the example blog template provided by MDL. I extended the template to work with Hugo’s frontmatter and templating functions. It include three content types: blog posts, projects, bio section. It makes heavy use of cards, which are one of the primary methods of displaying content in Material Design.</p>
                         <p>I also created a Hugo Theme based on the MaterializeCSS framework. <a href="https://github.com/jchatkinson/hugo-materialized">The theme</a> features three main components - A bio, posts, and projects. The bio is laid out a bit like a resume. It automatically displays a few recent projects and posts, with some static content below. Posts are presumeably the most viewed part of the site, and appear prominently on the front page. Projects are displayed as cards with room for an image, title, description, and links to the repo and details. A simple sidenav is always available on larger screens, and reverts to a collapseable side-nav on smaller screens. </p></div>
                     </div>
                 </li>
-                <li>
+                <li onclick="toggleVisibility(this)">
                     <div class='timeline-icon'><i class="fa fa-github-alt fa-lg" aria-hidden="true"></i></div>
                     <div class='timeline-title-wrapper'>
-                        <time>June 18th, 2014</time>
+                        <time>June 2014</time>
                         <div class='timeline-title'>SDOF Analysis Program</div>
-                        <a class='timeline-pill' onclick="toggleVisibility(this)">+ Expand</a>
-                        <div class='timeline-description'><p>One of my first web development projects was to create a single-degree-of-freedom analysis tool. I wanted to learn some basic web development skills, and chose to use AngularJS and Foundation framework. The code is available at a github repository <a href='http://jchatkinson.github.io/sdof'>here</a></p></div>
+                        <div class='timeline-description'><p>One of my first web development projects was to create a single-degree-of-freedom analysis tool. I wanted to learn some basic web development skills, and chose to use AngularJS and Foundation framework. The code is available in <a href='https://jchatkinson.github.io/sdof'>my github repository </a></p></div>
                     </div>
                 </li>
-                <li>
+                <li onclick="toggleVisibility(this)">
                     <div class='timeline-icon'><i class="fa fa-code fa-lg" aria-hidden="true"></i></div>
                     <div class='timeline-title-wrapper'>
-                        <time>May 18th, 2014</time>
+                        <time>May 2014</time>
                         <div class='timeline-title'>Reinforced Concrete Design in Matlab</div>
-                        <a class='timeline-pill' onclick="toggleVisibility(this)">+ Expand</a>
                         <div class='timeline-description'><p>I've written a substantial amount of MATLAB code, mostly to do with the design and analysis of reinforced concrete buildings. This includes scripts to process and scale earthquake ground motion records, to do response spectrum analysis, to calculate the axial-moment interaction diagram of arbitrary reinforced concrete sections, and scripts to create nonlinear models for OpenSees.</p></div>
                     </div>
                 </li>
-                <li>
+                <li onclick="toggleVisibility(this)">
                     <div class='timeline-icon'><i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i></div>
                     <div class='timeline-title-wrapper'>
-                        <time>May 18th, 2013</time>
+                        <time>September 2008 - April 2013</time>
                         <div class='timeline-title'>BASc in Civil Engineering</div>
-                        <a class='timeline-pill' onclick="toggleVisibility(this)">+ Expand</a>
                         <div class='timeline-description'>In 2013 I recieved a Bachelor of Applied Science in Civil Engineering from the University of British Columbia.</div>
                     </div>
                 </li>
@@ -129,20 +133,27 @@
 
     <script language="javascript" type="text/javascript">
         function toggleVisibility(ele) {
-            var parent = ele.parentNode;
-            var target = parent.getElementsByClassName('timeline-description');
-            var button = parent.getElementsByClassName('timeline-pill');
+            var target = ele.getElementsByClassName('timeline-description');
             if (target[0]) {
-                target = target[0]; button=button[0];
+                target = target[0];
                 if (target.style.display == 'none' || target.style.display == '') {
                     target.style.display = 'block';
-                    button.innerHTML = '- Collapse'
                 } else {
                     target.style.display = 'none';
-                    button.innerHTML = '+ Expand'
                 }
             }
         }
+    </script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-91284245-1', 'auto');
+    ga('send', 'pageview');
+
     </script>
 </body>
 

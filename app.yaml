@@ -6,7 +6,6 @@ handlers:
 - url: /.well-known
   static_dir: www/well-known
 
-
 - url: /
   static_files: www/index.html
   upload: www/index.html

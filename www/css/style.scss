@@ -32,10 +32,11 @@ a {
 
 // ensure that the navigation stays at the top of the browser window by giving it a position: fixed property. Setting its width to min-width: 100% will ensure that the navigation spans the full width of the browser window.
 .navBar {
-  background-color: $color2;
+  background-color: $color4;
   position: fixed;
   min-width: 100%;
   z-index: 1;
+  
 }
 
 .logo {
@@ -70,7 +71,7 @@ nav {
     
     a {
       text-decoration: none;
-      transition: all .5s ease;
+      transition: all 0.1s ease;
       &:hover {color: $color5;}
     }
   }
@@ -102,7 +103,7 @@ nav {
       list-style-type: none;
       opacity: 0;
       text-align: center;
-      transition: all 1s ease;
+      transition: all 0.1s ease;
       width: 100%;
       visibility: hidden;
       padding-left: 0px;
@@ -140,7 +141,7 @@ nav {
 
 header {
     text-align: center;
-    background-color: $color2;
+    background-color: $color4;
     padding-bottom: 60px;
 
     p {
@@ -172,13 +173,12 @@ main {
         list-style: none;
 
         li {
-            cursor: pointer;
             display: flex;
             flex-direction: column;
             position: relative;
             padding: 0 0 56px 40px;
             min-height: 100px;
-
+            cursor: pointer; 
         }
 
         li:not(:last-child):before {
@@ -190,6 +190,11 @@ main {
             width: 6px;
             top: 82px;
             border-radius: 3px;
+        }
+        li:hover {
+            .timeline-title{
+                color: $color5;
+            }
         }
     }
 
@@ -223,6 +228,7 @@ main {
         border-radius: 24px;
         background-color: $color5;
         padding: 0 6px 0 6px;
+        cursor: pointer;
 
         width: 76px;
         text-align: center;
